@@ -25,6 +25,6 @@ There is an objective-c version `kbswitch.m` that can be compiled with
 
 If you want to switch from (other language) to English when going from insert mode to normal mode in vim/neovim, add this to your config:
 
-`inoremap <ESC> <ESC>:call system("kbswitch 'com.apple.keyboard.ABC'")<CR>:echon ''<CR>`
+`inoremap <ESC> <ESC>:execute 'silent! !kbswitch com.apple.keylayout.ABC'<CR>:echon ''<CR>`
 
 Note that the exectuble must be in your $PATH.
